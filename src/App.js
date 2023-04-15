@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  let zeit = new Date().toLocaleTimeString(); // state baslangic verisi icin yazdik yazmasak da olur.
+
+  const [currentTime, setCurrentTime] = useState(zeit);
+
+  function Time() {
+    let time = new Date().toLocaleTimeString();
+    setCurrentTime(time);
+  } // Fonksiyon olarak yazmaliyiz ki; setInterval saniyede bir fonksiyonu calistirsin ve fonksiyon oldugunda güncelleyebilsin diger türlü hata verir.
+
+  setInterval(Time, 1000); // bu olmadan funct güncellenmez. Son güncellendigi dk ve sn görünür ekranda sadece. 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 class="digital-clock">{currentTime}</h1>
     </div>
   );
 }

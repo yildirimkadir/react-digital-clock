@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,68 @@
   to {
     transform: rotate(360deg);
   }
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #10101E;
+}
+
+.digital-clock {
+  color: #fff;
+  background-color: #10101E;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 600px;
+  text-align: center;
+  padding: 15px 15px;
+  border: 3px solid #BF2121;
+  border-radius: 5px;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(255, 2555, 255, 0.1));
+  transition: background-color 0.5s, box-shadow 1s;
+}
+
+.digital-clock:hover {
+  background-color: #BF2121;
+  box-shadow: 0 0 30px #BF2121;
+}
+
+/* .date {
+  text-align: center;
+  font-size: 20px;
+} */
+
+
+/* .clock {
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+} */
+
+/* .clock span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.clock span:last-child {
+  background-color: #BF2121;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-top: 13px;
+  padding: 0 5px;
+  border-radius: 3px;
+} */
